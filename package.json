@@ -15,7 +15,9 @@
   },
   "author": "Maximiliano Osorio",
   "license": "MIT",
-  "engines": { "node" : ">=4" },
+  "engines": {
+    "node": ">=4"
+  },
   "bugs": {
     "url": "https://github.com/sirspock/importer/issues"
   },
