@@ -2,27 +2,18 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container-narrow">
-<<<<<<< HEAD
   <h1 class="mt-5">Import MINT Component to WINGS</h1>
-=======
-  <h1 class="mt-5">New server</h1>
->>>>>>> 47e133b05d542f00041d3550f6069d4c069ab495
     <br/>
     <form id="addForm" class="form form-add" method="POST" action="" role="form">
             {{ form.csrf_token }}
             <div class="form-group">
                 {{form.component.label}}
-<<<<<<< HEAD
                 {{form.component(value="https://w3id.org/mint/instance/pihm", class_="form-control")}}
-=======
-                {{form.component(value="http://w3id.org/mint/instance/pihm", class_="form-control")}}
->>>>>>> 47e133b05d542f00041d3550f6069d4c069ab495
             </div>
             <div class="form-group">
                 {{form.server.label}}
                 {{form.server(placeholder="Name of your new configuration", class_="form-control")}}
             </div>
-<<<<<<< HEAD
             <div class="form-group">
                 {{form.wings_username.label}}
                 {{form.wings_username(class_="form-control")}}
@@ -35,8 +26,6 @@
                 {{form.wings_domain.label}}
                 {{form.wings_domain(class_="form-control")}}
             </div>
-=======
->>>>>>> 47e133b05d542f00041d3550f6069d4c069ab495
             <p><input class="btn btn-primary" type="submit" value="add"></p>
     </form>
 </div>
