@@ -10,8 +10,8 @@ Quickstart
 
 Run the following commands to bootstrap your environment ::
 
-    git clone https://github.com/sirspock/importer
-    cd importer
+    https://github.com/mintproject/wings-importer
+    cd wings-importer
     pipenv install --dev
     cp .env.example .env
     npm install
