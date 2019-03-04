@@ -2,7 +2,7 @@
 """The app module, containing the app factory function."""
 from flask import Flask, render_template
 
-from importer import commands, public, user, server
+from importer import commands, public, user, server, mint
 from importer.extensions import bcrypt, cache, csrf_protect, db, debug_toolbar, login_manager, migrate, webpack
 
 
@@ -39,6 +39,8 @@ def register_blueprints(app):
     app.register_blueprint(public.views.blueprint)
     app.register_blueprint(user.views.blueprint)
     app.register_blueprint(server.views.blueprint)
+    app.register_blueprint(mint.views.blueprint)
+
     return None
 
 

@@ -1,0 +1,21 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<div class="container-narrow">
+  <h1 class="mt-5">New server</h1>
+    <br/>
+    <form id="addForm" class="form form-add" method="POST" action="" role="form">
+            {{ form.csrf_token }}
+            <div class="form-group">
+                {{form.component.label}}
+                {{form.component(value="http://w3id.org/mint/instance/pihm", class_="form-control")}}
+            </div>
+            <div class="form-group">
+                {{form.server.label}}
+                {{form.server(placeholder="Name of your new configuration", class_="form-control")}}
+            </div>
+            <p><input class="btn btn-primary" type="submit" value="add"></p>
+    </form>
+</div>
+{% endblock %}
+
