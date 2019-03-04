@@ -2,7 +2,7 @@
 importer
 ===============================
 
-Import object from MINT Catalog to WINGS
+Import components from MINT Catalog to WINGS
 
 
 Quickstart
