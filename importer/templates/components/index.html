@@ -1,0 +1,33 @@
+
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <table class="table table-striped" id="owned_stock_table">
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>WINGS Server</th>
+                        <th> User</th>
+                        <th>MINT Server</th>
+                        <th>MINT Endpoint</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for server in servers %}
+                        <tr>
+                        <td>{{ server.server_name }}</td>
+                        <td>{{ server.server_wings }}</td>
+                        <td>{{ server.wings_username }}</td>
+                        <td>{{ server.server_mint }}</td>
+                        <td>{{ server.endpoint_mint }}</td>
+                    </tr>
+                        {% endfor %}
+                    </tbody>
+                    </table>
+                </div>
+                  </div>
+    </div>
+{% endblock %}
+
