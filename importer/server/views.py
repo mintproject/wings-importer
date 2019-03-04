@@ -34,10 +34,16 @@ def add():
     if form.validate_on_submit():
         Server.create(server_name=form.server_name.data, server_wings=form.server_wings.data,
                       server_mint=form.server_mint.data, endpoint_mint=form.endpoint_mint.data,
+<<<<<<< HEAD
                       wings_exporturl=form.wings_exporturl.data, user=current_user,
                       is_public=form.is_public.data)
         success = '{} was created'.format(form.server_name.data)
         flash(success, 'success')
+=======
+                      wings_username=form.wings_username.data, wings_password=form.wings_password.data,
+                      wings_exporturl=form.wings_exporturl.data, user=current_user)
+        flash('Thank you for registering. You can now log in.', 'success')
+>>>>>>> 47e133b05d542f00041d3550f6069d4c069ab495
         return redirect(url_for('server.index'))
     else:
         flash_errors(form)
