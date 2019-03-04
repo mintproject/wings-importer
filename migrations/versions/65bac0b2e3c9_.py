@@ -1,8 +1,8 @@
-"""user and server
+"""empty message
 
-Revision ID: 9ab0db650ae5
+Revision ID: 65bac0b2e3c9
 Revises: 
-Create Date: 2019-03-03 17:57:49.964225
+Create Date: 2019-03-04 15:23:34.877564
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '9ab0db650ae5'
+revision = '65bac0b2e3c9'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -46,9 +46,8 @@ def upgrade():
     sa.Column('server_wings', sa.String(length=256), nullable=False),
     sa.Column('server_mint', sa.String(length=256), nullable=False),
     sa.Column('endpoint_mint', sa.String(length=256), nullable=False),
-    sa.Column('wings_username', sa.String(length=80), nullable=False),
-    sa.Column('wings_password', sa.Binary(), nullable=True),
     sa.Column('wings_exporturl', sa.String(length=256), nullable=False),
+    sa.Column('is_public', sa.Boolean(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')

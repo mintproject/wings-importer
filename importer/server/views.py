@@ -8,7 +8,6 @@ from importer.server.models import Server
 
 from importer.utils import flash_errors
 
-
 blueprint = Blueprint('server', __name__, url_prefix='/servers', static_folder='../static')
 
 
@@ -27,18 +26,18 @@ def index():
                            prev_url=prev_url)
 
 
-
 @blueprint.route('/add/', methods=['GET', 'POST'])
 @login_required
 def add():
     """Register new user."""
     form = AddForm(request.form)
     if form.validate_on_submit():
-        Server.create(server_name=form.server_name.data, server_wings=form.server_wings.data, 
-            server_mint=form.server_mint.data, endpoint_mint=form.endpoint_mint.data,
-            wings_username=form.wings_username.data, wings_password=form.wings_password.data, 
-            wings_exporturl=form.wings_exporturl.data, user=current_user)
-        flash('Thank you for registering. You can now log in.', 'success')
+        Server.create(server_name=form.server_name.data, server_wings=form.server_wings.data,
+                      server_mint=form.server_mint.data, endpoint_mint=form.endpoint_mint.data,
+                      wings_exporturl=form.wings_exporturl.data, user=current_user,
+                      is_public=form.is_public.data)
+        success = '{} was created'.format(form.server_name.data)
+        flash(success, 'success')
         return redirect(url_for('server.index'))
     else:
         flash_errors(form)

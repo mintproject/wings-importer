@@ -12,7 +12,7 @@
             </div>
             <div class="form-group">
                 {{form.server_wings.label}}
-                {{form.server_wings(value="http://dev.wings.isi.edu", class_="form-control")}}
+                {{form.server_wings(value="http://dev.wings.isi.edu/wings-portal", class_="form-control")}}
             </div>
             <div class="form-group">
                 {{form.server_mint.label}}
@@ -21,19 +21,15 @@
             <div class="form-group">
                 {{form.endpoint_mint.label}}
                 {{form.endpoint_mint(value="http://ontosoft.isi.edu:3030/ds/query", class_="form-control")}}
-            </div>            
-            <div class="form-group">
-                {{form.wings_username.label}}
-                {{form.wings_username(class_="form-control")}}
-            </div>
-            <div class="form-group">
-                {{form.wings_password.label}}
-                {{form.wings_password(class_="form-control")}}
             </div>
             <div class="form-group">
                 {{form.wings_exporturl.label}}
                 {{form.wings_exporturl(value="http://localhost:8080/wings-portal", class_="form-control")}}
                 <small id="emailHelp" class="form-text text-muted">If you using datascience4all.org, you must use http://ontosoft.isi.edu:8080/wings-portal.</small>
+            </div>
+            <div class="form-group">
+                {{form.is_public.label}}
+                {{form.is_public}}
             </div>
             <p><input class="btn btn-primary" type="submit" value="add"></p>
     </form>
